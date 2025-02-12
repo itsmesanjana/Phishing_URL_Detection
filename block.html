@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detection System</title>
+</head>
+<body>
+    <div>
+        {% if blocked %}
+        <p>The site has been blocked successfully.</p>
+        {% else %}
+        <p>Failed to block the site.</p>
+        {% endif %}
+        <form action="/" method="get">
+            <button type="submit" class="btn btn-primary">Check another URL</button>
+        </form>
+    </div>
+</body>
+</html>
