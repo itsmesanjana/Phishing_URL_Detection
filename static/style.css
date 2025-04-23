@@ -1,0 +1,425 @@
+General Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f0f2f5, #e8f0f7);
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    animation: fadeIn 1.5s ease-in;
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: #0f0f0f;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    animation: slideDown 0.7s ease-out;
+}
+
+.navbar:hover {
+    background-color: #111;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e8f5f2;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: #00ff91;
+    animation: bounce 0.6s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+    font-size: 1.1em;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #00ffc3;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #00ffc3;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+    animation: linkHighlight 0.5s ease-out;
+}
+
+/* Header */
+header {
+    background: #f7f7f9;
+    color: #fff;
+    padding: 1px 0;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    font-size: 2rem;
+    animation: slideInFromTop 1.5s ease-out;
+}
+
+/* Main Container */
+main {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Section Containers */
+.form-section, .result-section {
+    background-color: #ffffff;
+    padding: 35px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+.form-section:hover, .result-section:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.form-section, .result-section {
+    animation-delay: 0.2s;
+}
+/* Phishing Awareness Section */
+.phishing-section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Open Sans', sans-serif;
+    transition: box-shadow 0.3s ease;
+}
+
+.phishing-section h2 {
+    color: #2e3a59;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.phishing-section p {
+    font-family: 'Open Sans', sans-serif; /* Body text font */
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+.phishing-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+    font-size: 1.05em;
+    color: #424242;
+}
+
+.phishing-section ul li {
+    margin-bottom: 12px;
+}
+
+/* Hover effect for the phishing section */
+.phishing-section:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Phishing Tip Emphasis */
+.phishing-tips {
+    margin-top: 15px;
+}
+
+.phishing-tips li {
+    color: #3a3f58;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Headings */
+h1, h2 {
+    color: #2e3a59;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 2.2em;
+    animation: fadeIn 1.5s ease;
+}
+
+h3 {
+    color: #636e8b;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+/* Container */
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Labels and Inputs */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #3a3f58;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #cdd4e0;
+    border-radius: 8px;
+    background-color: #f9fbfd;
+    font-size: 1.05em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: #5c6bc0;
+    outline: none;
+    box-shadow: 0 0 8px rgba(92, 107, 192, 0.3);
+}
+
+/* Buttons */
+button {
+    background-color: #5c6bc0;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(92, 107, 192, 0.3);
+    animation: pulse 2s infinite;
+}
+
+button:hover {
+    background-color: #3f51b5;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #283593;
+    transform: scale(0.98);
+}
+
+/* Footer */
+footer {
+    background-color: #3a3f58;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.9em;
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+
+/* Result Section */
+.result-section p {
+    font-size: 1.2em;
+    color: #5c6bc0;
+}
+
+.result-section p strong {
+    color: #d32f2f;
+}
+
+.reasons {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.nav-buttons button {
+    margin: 0 10px;
+}
+
+/* Feedback Section */
+#feedback-section {
+    margin-top: 25px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 15px;
+}
+
+/* Feedback Form */
+#feedback-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .nav-buttons button {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Block Button */
+#block-btn {
+    background-color: #dc3545; /* red */
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#block-btn:hover:not(:disabled) {
+    background-color: #c82333;
+}
+
+#block-btn:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    border: 1px solid #999;
+}
+
+/* Animations */
+
+/* Fade In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Slide Down */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Slide In From Top */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Bounce Effect */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Link Highlight */
+@keyframes linkHighlight {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Pulse Effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
